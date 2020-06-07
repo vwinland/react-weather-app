@@ -9,4 +9,10 @@ export default class weatherContainer extends Component {
       </div>
     );
   }
+
+  fetchWeather = (query = "London") => {
+    fetch(
+      `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={e205c8e56ca4ee10c7ef8a8ca832cae1}`
+    );
+  };
 }
