@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
-export default class weatherContainer extends Component {
+export default class WeatherContainer extends Component {
   render() {
     return (
       <div>
-        <weatherSearch fetchWeather={this.fetchWeather} />
-        <weatherList weather={this.state.weather} />
+        Test {this.fetchWeather()}
+        {/* <WeatherSearch fetchWeather={this.fetchWeather} /> */}
+        {/* <weatherList weather={this.state.weather} /> */}
       </div>
     );
+    console.log(this.fetchWeather);
   }
 
-  fetchWeather = (query = "London") => {
-    fetch(
-      `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={e205c8e56ca4ee10c7ef8a8ca832cae1}`
-    );
+  fetchWeather = () => {
+    return <div>Hello</div>; //create fetch request using api-key && don't forget to fix base_url
   };
 }
